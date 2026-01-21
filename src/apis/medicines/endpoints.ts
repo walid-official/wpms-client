@@ -1,0 +1,1 @@
+export const MEDICINES = '/api/v1/medicines';

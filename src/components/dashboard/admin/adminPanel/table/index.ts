@@ -1,0 +1,1 @@
+export {MedicineTable} from "./MedicineTable"

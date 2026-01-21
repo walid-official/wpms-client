@@ -1,0 +1,1 @@
+export const ORDERS = '/api/v1/orders' 
