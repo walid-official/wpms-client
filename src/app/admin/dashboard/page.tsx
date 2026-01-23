@@ -48,38 +48,29 @@ const DashboardPage = () => {
   ]
 
   return (
-    <div className="min-h-screen bg-background p-6 md:p-8">
-      <div className="mx-auto max-w-7xl">
-        {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold text-foreground mb-2">Dashboard</h1>
-          <p className="text-muted-foreground">
-            Manage your pharmacy operations efficiently
-          </p>
-        </div>
+    <div className="w-full">
+      {/* Header */}
+      <div className="mb-8">
+        <h1 className="text-3xl font-bold text-slate-900 mb-2">Dashboard</h1>
+        <p className="text-slate-600">
+          Manage your pharmacy operations efficiently
+        </p>
+      </div>
 
-        {/* Dashboard Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 lg:gap-8">
-          {dashboardSections.map((section, index) => (
-            <DashboardCard
-              key={section.title}
-              title={section.title}
-              description={section.description}
-              icon={section.icon}
-              buttonText={section.buttonText}
-              buttonVariant={section.buttonVariant}
-              delay={index * 100}
-              href={section.href}
-            />
-          ))}
-        </div>
-
-        {/* Footer */}
-        <div className="mt-12 text-center">
-          <p className="text-sm text-muted-foreground">
-            Pharmacy Management System • Built with modern technology
-          </p>
-        </div>
+      {/* Dashboard Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {dashboardSections.map((section, index) => (
+          <DashboardCard
+            key={section.title}
+            title={section.title}
+            description={section.description}
+            icon={section.icon}
+            buttonText={section.buttonText}
+            buttonVariant={section.buttonVariant}
+            delay={index * 100}
+            href={section.href}
+          />
+        ))}
       </div>
     </div>
   )
