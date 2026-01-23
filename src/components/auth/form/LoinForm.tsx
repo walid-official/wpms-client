@@ -123,6 +123,32 @@ export const LoginForm = () => {
             >
               {isPending ? "Signing in..." : "Login"}
             </Button>
+
+            {/* Quick Login Buttons */}
+            <div className="grid grid-cols-2 gap-3 mt-4">
+              <Button
+                type="button"
+                variant="outline"
+                className="w-full text-xs"
+                onClick={() => {
+                  setEmail("talha.medicin@gmail.com")
+                  setPassword("Medicine@90")
+                }}
+              >
+                Login as Admin
+              </Button>
+              <Button
+                type="button"
+                variant="outline"
+                className="w-full text-xs"
+                onClick={() => {
+                  setEmail("walid.official8@gmail.com")
+                  setPassword("Medicin@90")
+                }}
+              >
+                Login as Manager
+              </Button>
+            </div>
           </form>
         </CardContent>
       </Card>
