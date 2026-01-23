@@ -116,11 +116,14 @@ export const Sidebar = () => {
           if (section.title === "Main") {
             return {
               ...section,
-              items: section.items.filter((item) => item.href === "/" || item.href === "/admin/sales-billing"),
+              items: section.items.filter((item) => item.href === "/"),
             };
           }
           if (section.title === "Operations") {
-            return section;
+            return {
+              ...section,
+              items: section.items.filter((item) => item.name === "Sales & Billing"),
+            };
           }
           // Hide Management and Analytics sections for MANAGER role
           return null;
