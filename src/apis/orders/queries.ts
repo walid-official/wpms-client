@@ -1,13 +1,13 @@
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import {
   ApiResponse,
   CreateOrderRequest,
   CreateOrderResponseData,
-  OrdersListPayload,
+  Order,
 } from "@/interfaces/orders.interface";
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { createOrder, getOrders } from "./apis";
 
-/**  Create Order Hook */
+/* Create Order Hook */
 export const useCreateOrder = () => {
   const queryClient = useQueryClient();
 
@@ -23,22 +23,20 @@ export const useCreateOrder = () => {
   });
 };
 
-/** Get Orders Hook */
-export const useGetOrders = (
-  filters?: {
-    filter?: string;
-    start?: string;
-    end?: string;
-    orderId?: string;
-    customerName?: string;
-    medicineName?: string;
-    page?: number;
-    limit?: number;
-    sortBy?: string;
-    sortOrder?: "asc" | "desc";
-  }
-) => {
-  return useQuery<ApiResponse<OrdersListPayload>, Error>({
+/* Get Orders Hook */
+export const useGetOrders = (filters?: {
+  filter?: string;
+  start?: string;
+  end?: string;
+  orderId?: string;
+  customerName?: string;
+  medicineName?: string;
+  page?: number;
+  limit?: number;
+  sortBy?: string;
+  sortOrder?: "asc" | "desc";
+}) => {
+  return useQuery<ApiResponse<Order[]>, Error>({
     queryKey: ["orders", filters],
     queryFn: () => getOrders(filters),
     staleTime: 1000 * 60 * 2,

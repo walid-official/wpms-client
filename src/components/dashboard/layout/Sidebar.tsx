@@ -56,8 +56,8 @@ const navigationSections: NavSection[] = [
     items: [
       { name: "Admin Panel", href: "/admin", icon: Settings },
       { name: "Customers", href: "/admin/customers", icon: UserCircle },
-      { name: "Suppliers", href: "/admin/suppliers", icon: Truck },
-      { name: "Users", href: "/admin/users", icon: Users },
+      // { name: "Suppliers", href: "/admin/suppliers", icon: Truck },
+      // { name: "Users", href: "/admin/users", icon: Users },
     ],
   },
   {

@@ -1,4 +1,8 @@
+"use client"
+
 import { AdminPanel } from '@/components/dashboard/admin/adminPanel';
+import { ROLE } from '@/constants/role';
+import { withRole } from '@/libs';
 import React from 'react';
 
 const AdminPage = () => {
@@ -9,4 +13,4 @@ const AdminPage = () => {
   );
 };
 
-export default AdminPage;
+export default withRole(AdminPage, [ROLE.ADMIN, ROLE.MANAGER]);

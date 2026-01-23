@@ -76,4 +76,4 @@ const DashboardPage = () => {
   )
 }
 
-export default withRole(DashboardPage, [ROLE.ADMIN])
+export default withRole(DashboardPage, [ROLE.ADMIN, ROLE.MANAGER])

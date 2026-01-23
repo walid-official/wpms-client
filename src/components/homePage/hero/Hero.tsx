@@ -52,7 +52,7 @@ export const Hero = () => {
 
               {/* Heading with enhanced gradient */}
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold max-w-full sm:max-w-[85%] md:max-w-[75%] lg:max-w-[65%] mx-auto leading-tight">
-                <span className="block">Talha</span>
+                <span className="block">Modern</span>
                 <span className="block bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent animate-gradient">
                   Pharmacy
                 </span>

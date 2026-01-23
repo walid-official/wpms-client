@@ -116,8 +116,8 @@ const [showNewPassword, setShowNewPassword] = useState(false);
               <Image src="/logo/logo2.png" alt="Logo 2" width={40} height={40} />
             </div>
 
-            {/* Desktop Navigation */}
-            {role !== "MANAGER" && (
+            {/* Desktop Navigation - Only show if user is logged in */}
+            {user?.data && role !== "MANAGER" && (
               <div className="hidden md:flex items-center space-x-1">
                 {navigationItems.map((item) => {
                   const Icon = item.icon;
@@ -144,7 +144,7 @@ const [showNewPassword, setShowNewPassword] = useState(false);
 
             {/* Right Section */}
             <div className="flex items-center space-x-4">
-              {role === "MANAGER" && (
+              {user?.data && role === "MANAGER" && (
                 <Link href="/admin/sales-billing">
                   <Button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2">
                     Sales & Billing
@@ -152,8 +152,8 @@ const [showNewPassword, setShowNewPassword] = useState(false);
                 </Link>
               )}
 
-              {/* Mobile Menu */}
-              {role !== "MANAGER" && (
+              {/* Mobile Menu - Only show if user is logged in */}
+              {user?.data && role !== "MANAGER" && (
                 <div className="md:hidden">
                   <Button
                     variant="ghost"
